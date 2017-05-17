@@ -1,3 +1,6 @@
+# 0. Initialize
+# ------------------------
+
 @shopping_cart = []
 
 @departments = [ :mats, :props, :clothes, :books ]
@@ -20,3 +23,19 @@
     { reference_number: 130, name: "Yoga Fan Fiction", price: 20 },
   ]
 }
+
+# 1. Welcome
+# ------------------------
+
+time = Time.new
+
+puts ""
+
+case
+when time.hour <= 11
+  puts "Good morning and welcome to Yoga World!"
+when time.hour >= 12 && time.hour < 18
+  puts "Good afternoon and welcome to Yoga World!"
+when time.hour >= 18
+  puts "Good evening and welcome to Yoga World!"
+end
