@@ -33,9 +33,21 @@ puts ""
 
 case
 when time.hour <= 11
-  puts "Good morning and welcome to Yoga World!"
+  puts "Good morning and welcome to Yoga World!\n"
 when time.hour >= 12 && time.hour < 18
-  puts "Good afternoon and welcome to Yoga World!"
+  puts "Good afternoon and welcome to Yoga World!\n"
 when time.hour >= 18
-  puts "Good evening and welcome to Yoga World!"
+  puts "Good evening and welcome to Yoga World!\n"
 end
+
+def choose_department
+  puts "Please select the department you desire: "
+
+@departments.each_with_index do |department, index|
+    puts (index + 1).to_s + ") #{department}"
+  end
+
+end
+
+
+choose_department
